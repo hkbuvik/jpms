@@ -8,3 +8,5 @@ theme-links      : [ "#5289F7", " #F5A623" ]
 theme-code       : [ "Source Code Pro" ]
 theme-controls   : [ "#484848" ]
 theme-margins    : [ "0", "15px" ]
+
+logo : assets/images/kantega-logo.svg
