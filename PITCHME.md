@@ -39,11 +39,11 @@ En modul må ha en universelt unikt navn. (Revers domenenavn er vanlig å bruke.
 
 @snap[west]
 @ul[list-spaced-bullets text-white text-09]
-- _requires_: Moduler er denne modulen avhengig av.
-- _uses_: Tjenester bruker denne modulen.
-- _exports_: Pakker som er tilgjengelige.
-- _provides_: Tjenester denne modulen tilbyr.
-- _opens_: Pakker åpne for bruk reflection (kan kvalifiseres).
+- _requires_: Moduler er denne modulen avhengig av
+- _uses_: Tjenester bruker denne modulen
+- _exports_: Pakker som er tilgjengelige
+- _provides_: Tjenester denne modulen tilbyr
+- _opens_: Pakker åpne for bruk reflection
 @ulend
 @snapend
 
@@ -99,8 +99,8 @@ module no.demo.core.user.authentication {
 
 @snap[west]
 @ul[list-spaced-bullets text-white text-09]
-- Sterkere innkapsling: Kun eksporterte klasser er public utenfor et bibliotek. Public/package/protected klasser som ikke er eksporterte er IKKE tilgjengelige utenfor biblioteket.
-- Sterkere kontroll av avhengigheter mellom biblioteker: Vha module-path dannes graf av moduler (i både compile- og runtime) som både javac/java kan forholde seg til, ikke bare en haug med klasser (classpath).
+- *Sterkere innkapsling*: Kun eksporterte klasser er public utenfor et bibliotek. Public/package/protected klasser som ikke er eksporterte er IKKE tilgjengelige utenfor biblioteket.
+- *Sterkere kontroll av avhengigheter*: Vha module-path dannes graf av moduler (i både compile- og runtime) som både javac/java kan forholde seg til, ikke bare en haug med klasser (classpath).
 @ulend
 @snapend
 
@@ -110,7 +110,7 @@ module no.demo.core.user.authentication {
 ### Nytteverdi: Oppstart av applikasjon
 @snapend
 
-Kan få raskere oppstart, siden søk etter og lasting av klasser sannsynligvis vil gå raskere, siden en modulgraf settes opp ved oppstart. Kan være viktig i containerbaserte miljø.
+Kan få raskere oppstart, (siden søk etter og lasting av klasser sannsynligvis vil gå raskere, siden en modulgraf settes opp ved oppstart) noe som kan være viktig i containerbaserte miljø.
 
 
 ---
@@ -118,7 +118,7 @@ Kan få raskere oppstart, siden søk etter og lasting av klasser sannsynligvis v
 ### Nytteverdi: Frikobling mellom moduler
 @snapend
 
-##### Sterkere innkapsling, forskjellig grad av frikobling mellom moduler:
+Sterkere innkapsling, forskjellig grad av frikobling mellom moduler:
 @snap[west]
 @ul[list-spaced-bullets text-white text-09]
 - Direkte avhengighet fra en modul til en annen modul: Instansierer tjenester typisk med new SomeFactory(). Gir kun avhengighet til eksporterte pakker, som gjerne kan være en pakke no.firma.modul.api med interfaces.
