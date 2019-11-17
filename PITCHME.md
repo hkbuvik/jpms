@@ -77,7 +77,7 @@ Eksempel:
 
 ---
 @snap[north-west]
-#### To viktige mål
+### Nytteverdi: To viktige mål
 @snapend
 
 @snap[west]
@@ -90,7 +90,7 @@ Eksempel:
 
 ---
 @snap[north-west]
-#### Oppstart av applikasjon
+### Nytteverdi: Oppstart av applikasjon
 @snapend
 
 Kan få raskere oppstart, siden søk etter og lasting av klasser sannsynligvis vil gå raskere, siden en modulgraf settes opp ved oppstart. Kan være viktig i containerbaserte miljø.
@@ -98,7 +98,7 @@ Kan få raskere oppstart, siden søk etter og lasting av klasser sannsynligvis v
 
 ---
 @snap[north-west]
-#### Frikobling mellom moduler
+### Nytteverdi: Frikobling mellom moduler
 @snapend
 
 ##### Sterkere innkapsling, forskjellig grad av frikobling mellom moduler:
@@ -109,9 +109,13 @@ Kan få raskere oppstart, siden søk etter og lasting av klasser sannsynligvis v
 @ulend
 @snapend
 
-##### Påstand: På lang sikt så vil det være enklere å vedlikeholde et system med JPMS-moduler.
 
-Den sterke innkapslingen vil ikke gjøre det så enkelt å ta snarveier, dvs lage unødvendige avhengheter, tidlig i et prosjekt.
+---
+### Nytteverdi: Påstand
+
+På lang sikt så vil det være enklere å vedlikeholde et system med JPMS-moduler.
+
+(Den sterke innkapslingen vil ikke gjøre det så enkelt å ta snarveier, dvs lage unødvendige avhengheter, tidlig i et prosjekt.)
 
 ---
 @snap[north-west]
@@ -122,7 +126,17 @@ Den sterke innkapslingen vil ikke gjøre det så enkelt å ta snarveier, dvs lag
 @ul[list-spaced-bullets text-white text-09]
 - Vi har benyttet JPMS-moduler i to prosjekter: Vipps login (er i produksjon) og BAPP2 (er under utvikling). Det er altså litt tidlig å si hva som er nytteverdien, men arkitekturen i systemene er tydelig påvirket av JPMS.
 - Maven er klargjort for JPMS fra tidlig av. Det vil si at Maven plugins (compiler, surefire, failsafe) «skjønner» og bruker modulepath.
-Tooling og tredjepartsbiblioteker er ikke veldig modne for JPMS ennå.
+@ulend
+@snapend
+
+---
+@snap[north-west]
+### Erfaringer
+@snapend
+
+@snap[west]
+@ul[list-spaced-bullets text-white text-09]
+- Tooling og tredjepartsbiblioteker er ikke veldig modne for JPMS ennå.
 Oversikt over biblioteker i Maven Central med JPMS modulnavn (gyldige og ugyldige) finnes på https://github.com/sormuras/modules.
 - Testing blir annerledes/vanskeligere på grunn av den sterke innkapslingen. Artikkel: https://sormuras.github.io/blog/2018-09-11-testing-in-the-modular-world.html. Vi gjør en del testing med classpath i stedet for modulepath siden vi støtter på begrensninger i tredjepartsbiblioteker.
 @ulend
