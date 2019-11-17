@@ -6,7 +6,9 @@
 
 ---?color=linear-gradient(90deg, #5384AD 65%, white 35%)
 
-## To viktige mål
+@snap[north-west h4-white]
+### To viktige mål
+@snapend
 
 @snap[west span-55]
 @ul[list-spaced-bullets text-white text-09]
