@@ -39,11 +39,11 @@ En modul må ha en universelt unikt navn. (Revers domenenavn er vanlig å bruke.
 
 @snap[west]
 @ul[list-spaced-bullets text-white text-09]
-- `requires` Hvilke andre moduler er denne modulen avhengig av.
-- `uses` Hvilke tjenester bruker denne modulen.
-- `exports` Hvilke pakker er tilgjengelige utenfor denne modulen.
-- `provides` Hvilke tjenester tilbyr denne modulen.
-- `opens` Hvilke pakker åpner denne moduler for bruk av reflection fra andre biblioteker (kan kvalifiseres).
+- `requires`: Moduler er denne modulen avhengig av.
+- `uses`: Tjenester bruker denne modulen.
+- `exports`: Pakker som er tilgjengelige.
+- `provides`: Tjenester denne modulen tilbyr.
+- `opens`: Pakker åpne for bruk reflection (kan kvalifiseres).
 @ulend
 @snapend
 
@@ -66,11 +66,9 @@ module no.demo.core.user.authentication {
     provides ConfigurationProperties
             with Configuration;
 
-    // Open configto be read by the configuration library.
+    // Open config to be read by the configuration library.
     opens no.demo.core.user.authentication.configuration
             to no.demo.configuration;
-    // Open for reflection from Spring modules.
-    opens no.demo.core.user.authentication.web to spring.core;
 }
 ```
 
