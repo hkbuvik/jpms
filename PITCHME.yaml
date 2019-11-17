@@ -1,0 +1,10 @@
+theme            : kantega
+
+theme-background : [ "#FFF" ]
+theme-headline   : [ "Calibri", "#5289F7", "none" ]
+theme-byline     : [ "Calibri", "#111111", "none" ]
+theme-text       : [ "Calibri", "#1C1C1C", "none" ]
+theme-links      : [ "#5289F7", "#5254F7" ]
+theme-code       : [ "Source Code Pro" ]
+theme-controls   : [ "#484848" ]
+theme-margins    : [ "0", "15px" ]
