@@ -34,7 +34,12 @@ JAR + moduldeskriptor
 ### Moduldeskriptor
 @snapend
 
-En modul må ha en universelt unikt navn. 
+@snap[west]
+@ul[list-spaced-bullets text-white text-09]
+- En modul må ha en universelt unikt navn.
+- Moduldeskriptor må ligge på rot-pakken. 
+@ulend
+@snapend
 
 Note:
 - Revers domenenavn er vanlig å bruke.
@@ -47,11 +52,11 @@ Note:
 
 @snap[west]
 @ul[list-spaced-bullets text-white text-09]
-- _requires_: Moduler er denne modulen avhengig av
-- _uses_: Tjenester bruker denne modulen
-- _exports_: Pakker som er tilgjengelige
-- _provides_: Tjenester denne modulen tilbyr
-- _opens_: Pakker åpne for bruk reflection
+- _requires_ - Moduler er denne modulen avhengig av
+- _uses_ - Tjenester denne modulen bruker
+- _exports_ - Pakker som er tilgjengelige
+- _provides_ - Tjenester denne modulen tilbyr
+- _opens_ - Pakker åpne for bruk reflection
 @ulend
 @snapend
 
@@ -62,6 +67,7 @@ Note:
 
 ```java
 module no.demo.core.user.authentication {
+
     requires oauth2.oidc.sdk;
     requires spring.web;
 
