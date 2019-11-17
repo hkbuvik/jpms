@@ -1,11 +1,13 @@
 Intro til
 ### Java Platform Module System
-### JPMS
+### (JPMS)
 
 ---
 ![IMAGE](assets/img/jpms-adoption.jpeg)
 Note:
-- Det tok 10 år(?) å modularisere JDK-en, drøyt 100 moduler.
+- Jeg har brukt JPMS i to prosjekter og er innovativ!
+- Andre som har brukt JPMS?
+- Det tok ca 10 år å modularisere selve JDK-en: Drøyt 100 moduler.
 
 
 ---
@@ -32,7 +34,10 @@ JAR + moduldeskriptor
 ### Moduldeskriptor
 @snapend
 
-En modul må ha en universelt unikt navn. (Revers domenenavn er vanlig å bruke.)
+En modul må ha en universelt unikt navn. 
+
+Note:
+- Revers domenenavn er vanlig å bruke.
 
 
 ---
@@ -77,20 +82,7 @@ module no.demo.core.user.authentication {
 
 
 ---
-@snap[north-west]
-### Hvem bruker JPMS?
-@snapend
-
-@snap[west]
-@ul[list-spaced-bullets text-white text-09]
-- Det tok 10 år(?) å modularisere JDK-en, drøyt 100 moduler.
-- Artikkel/graf fra InfoQ Q3 2019: «Early innovators» har nå startet å ta i bruk JPMS.
-@ulend
-@snapend
-
-
----
-@snap[north-west]
+@snap[midpoint]
 ### Hva er nytteverdien i praksis?
 @snapend
 
