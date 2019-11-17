@@ -53,7 +53,29 @@ En modul må ha en universelt unikt navn. (Revers domenenavn er vanlig å bruke.
 @snapend
 
 Eksempel:
-(TODO: Eksempel fra BAPP2?)
+```java
+module no.demo.core.user.authentication {
+    requires oauth2.oidc.sdk;
+    requires spring.web;
+
+    requires no.demo.log;
+    requires no.demo.configuration;
+    requires no.demo.engine;
+
+    exports no.demo.core.user.authentication.api;
+
+    provides ConfigurationProperties
+            with Configuration;
+    provides ActionHandler
+            with UserAuthentication;
+
+    // Open configuration properties to be read by the configuration library with reflection.
+    opens no.demo.core.user.authentication.configuration
+            to no.demo.configuration;
+    // Open for reflection from Spring modules.
+    opens no.demo.core.user.authentication.web to spring.core;
+}
+```
 
 
 ---
@@ -111,7 +133,9 @@ Kan få raskere oppstart, siden søk etter og lasting av klasser sannsynligvis v
 
 
 ---
+@snap[north-west]
 ### Nytteverdi: Påstand
+@snapend
 
 På lang sikt så vil det være enklere å vedlikeholde et system med JPMS-moduler.
 
