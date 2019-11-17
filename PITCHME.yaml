@@ -9,4 +9,4 @@ theme-code       : [ "Source Code Pro" ]
 theme-controls   : [ "#484848" ]
 theme-margins    : [ "0", "15px" ]
 
-logo : assets/images/kantega-logo.svg
+logo : assets/img/kantega-logo.svg
