@@ -11,7 +11,7 @@ Intro til JPMS
 ### To viktige mål
 @snapend
 @ul[list-spaced-bullets text-white text-09]
-- Sterkere innkapsling av protected/package klasser/metoder i et bibliotek.
+- Sterkere innkapsling av koden i et bibliotek.
 - Sterkere kontroll av avhengigheter mellom biblioteker.
 @ulend
 
@@ -39,11 +39,11 @@ En modul må ha en universelt unikt navn. (Revers domenenavn er vanlig å bruke.
 
 @snap[west]
 @ul[list-spaced-bullets text-white text-09]
-- `requires`: Moduler er denne modulen avhengig av.
-- `uses`: Tjenester bruker denne modulen.
-- `exports`: Pakker som er tilgjengelige.
-- `provides`: Tjenester denne modulen tilbyr.
-- `opens`: Pakker åpne for bruk reflection (kan kvalifiseres).
+- _requires_: Moduler er denne modulen avhengig av.
+- _uses_: Tjenester bruker denne modulen.
+- _exports_: Pakker som er tilgjengelige.
+- _provides_: Tjenester denne modulen tilbyr.
+- _opens_: Pakker åpne for bruk reflection (kan kvalifiseres).
 @ulend
 @snapend
 
