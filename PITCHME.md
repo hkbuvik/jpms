@@ -4,7 +4,7 @@
 
 ![IMAGE](assets/img/jpms-adoption.jpeg)
 
----?color=linear-gradient(90deg, #5384AD 75%, white 25%)
+---?color=linear-gradient(90deg, #034961 75%, white 25%)
 @snap[north-west h4-white]
 ### To viktige mål
 @snapend
@@ -17,7 +17,7 @@
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 75%, white 25%)
+---?color=linear-gradient(90deg, #034961 75%, white 25%)
 @snap[north-west h4-white]
 ### Hva er en modul?
 @snapend
@@ -25,7 +25,7 @@
 JAR + moduldeskriptor
 
 
----?color=linear-gradient(90deg, #5384AD 75%, white 25%)
+---?color=linear-gradient(90deg, #034961 75%, white 25%)
 @snap[north-west h4-white]
 ### Moduldeskriptor
 @snapend
@@ -46,7 +46,7 @@ Eksempel:
 (TODO: Eksempel fra BAPP2?)
 
 
----?color=linear-gradient(90deg, #5384AD 75%, white 25%)
+---?color=linear-gradient(90deg, #034961 75%, white 25%)
 @snap[north-west h4-white]
 ### Hvem bruker JPMS?
 @snapend
@@ -59,13 +59,13 @@ Eksempel:
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 75%, white 25%)
+---?color=linear-gradient(90deg, #034961 75%, white 25%)
 @snap[north-west h4-white]
 ### Hva er nytteverdien i praksis?
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 75%, white 25%)
+---?color=linear-gradient(90deg, #034961 75%, white 25%)
 @snap[north-west h4-white]
 #### To viktige mål
 @snapend
@@ -78,7 +78,7 @@ Eksempel:
 @snapend
 
 
----?color=linear-gradient(90deg, #5384AD 75%, white 25%)
+---?color=linear-gradient(90deg, #034961 75%, white 25%)
 @snap[north-west h4-white]
 #### Oppstart av applikasjon
 @snapend
@@ -86,7 +86,7 @@ Eksempel:
 Kan få raskere oppstart, siden søk etter og lasting av klasser sannsynligvis vil gå raskere, siden en modulgraf settes opp ved oppstart. Kan være viktig i containerbaserte miljø.
 
 
----?color=linear-gradient(90deg, #5384AD 75%, white 25%)
+---?color=linear-gradient(90deg, #034961 75%, white 25%)
 @snap[north-west h4-white]
 #### Frikobling mellom moduler
 @snapend
@@ -103,7 +103,7 @@ Påstand: På lang sikt så vil det være enklere å vedlikeholde et system med 
 
 Den sterke innkapslingen vil ikke gjøre det så enkelt å ta snarveier, dvs lage unødvendige avhengheter, tidlig i et prosjekt.
 
----?color=linear-gradient(90deg, #5384AD 75%, white 25%)
+---?color=linear-gradient(90deg, #034961 75%, white 25%)
 @snap[north-west h4-white]
 ### Erfaringer
 @snapend
