@@ -1,4 +1,4 @@
-theme            : kantega
+theme            : template
 
 theme-background : [ "#034961" ]
 theme-headline   : [ "Calibri", "#white", "none" ]
