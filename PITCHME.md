@@ -1,6 +1,6 @@
 # Intro til Java Platform Module System (JPMS)
 
-![IMAGE](assets/img/jpms-adoption.png)
-
 ---
+
+![IMAGE](assets/img/jpms-adoption.png)
 
