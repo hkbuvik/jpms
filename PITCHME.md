@@ -1,9 +1,12 @@
-Intro til JPMS
+Intro til
 ### Java Platform Module System
+### JPMS
 
 ---
-
 ![IMAGE](assets/img/jpms-adoption.jpeg)
+Note:
+- Det tok 10 år(?) å modularisere JDK-en, drøyt 100 moduler.
+
 
 ---
 
