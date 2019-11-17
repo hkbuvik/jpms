@@ -118,8 +118,8 @@ Kan få raskere oppstart, (siden søk etter og lasting av klasser sannsynligvis 
 ### Nytteverdi: Frikobling mellom moduler
 @snapend
 
-Sterkere innkapsling, forskjellig grad av frikobling mellom moduler:
 @snap[west]
+Sterkere innkapsling, forskjellig grad av frikobling:
 @ul[list-spaced-bullets text-white text-09]
 - Direkte avhengighet fra en modul til en annen modul: Instansierer tjenester typisk med new SomeFactory(). Gir kun avhengighet til eksporterte pakker, som gjerne kan være en pakke no.firma.modul.api med interfaces.
 - Full frikobling mellom moduler og mulighet for «plugin-arkitektur»: Laste instans av et interface (definert i en API-modul) med java.util.ServiceLoader. Hvilke moduler som skal deployes til et gitt miljø kan settes opp i en eller flere separate bootstrap-moduler.
