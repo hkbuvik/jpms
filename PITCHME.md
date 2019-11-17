@@ -6,7 +6,7 @@
 
 ---
 
-##To viktige mål
+## To viktige mål
 
 @snap[west span-55]
 @ul[list-spaced-bullets text-white text-09]
