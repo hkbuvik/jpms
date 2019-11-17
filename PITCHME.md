@@ -29,16 +29,27 @@ JAR + moduldeskriptor
 ### Moduldeskriptor
 @snapend
 
-En modul må ha en universelt unikt navn. Revers domenenavn er vanlig å bruke.
+En modul må ha en universelt unikt navn. (Revers domenenavn er vanlig å bruke.)
+
+
+---
+@snap[north-west]
+### Moduldeskriptor
+@snapend
 
 @snap[west]
 @ul[list-spaced-bullets text-white text-09]
-- requires: Hvilke andre moduler er denne modulen avhengig av.
-- uses: Hvilke tjenester bruker denne modulen.
-- exports: Hvilke pakker er tilgjengelige utenfor denne modulen.
-- provides: Hvilke tjenester tilbyr denne modulen.
-- opens: Hvilke pakker åpner denne moduler for bruk av reflection fra andre biblioteker (kan kvalifiseres).
+- `requires` Hvilke andre moduler er denne modulen avhengig av.
+- `uses` Hvilke tjenester bruker denne modulen.
+- `exports` Hvilke pakker er tilgjengelige utenfor denne modulen.
+- `provides` Hvilke tjenester tilbyr denne modulen.
+- `opens` Hvilke pakker åpner denne moduler for bruk av reflection fra andre biblioteker (kan kvalifiseres).
 @ulend
+@snapend
+
+---
+@snap[north-west]
+### Moduldeskriptor
 @snapend
 
 Eksempel:
