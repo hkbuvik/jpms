@@ -52,7 +52,6 @@ En modul må ha en universelt unikt navn. (Revers domenenavn er vanlig å bruke.
 ### Moduldeskriptor
 @snapend
 
-Eksempel:
 ```java
 module no.demo.core.user.authentication {
     requires oauth2.oidc.sdk;
@@ -66,10 +65,8 @@ module no.demo.core.user.authentication {
 
     provides ConfigurationProperties
             with Configuration;
-    provides ActionHandler
-            with UserAuthentication;
 
-    // Open configuration properties to be read by the configuration library with reflection.
+    // Open configto be read by the configuration library.
     opens no.demo.core.user.authentication.configuration
             to no.demo.configuration;
     // Open for reflection from Spring modules.
