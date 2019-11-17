@@ -10,3 +10,4 @@ theme-controls   : [ "#484848" ]
 theme-margins    : [ "0", "15px" ]
 
 logo : assets/img/kantega-logo.png
+logo-position : bottom-right
