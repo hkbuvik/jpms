@@ -2,5 +2,5 @@
 
 ---
 
-![IMAGE](assets/img/jpms-adoption.png)
+![IMAGE](assets/img/jpms-adoption.jpeg)
 
