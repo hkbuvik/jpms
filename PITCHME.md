@@ -94,17 +94,19 @@ module no.demo.core.user.authentication {
 ```
 
 
----
+---?color=#034961
 @snap[north-west]
 ### Lasting av klasser
 Klasser lastes fra module path, ikke fra classpath
 @snapend
 
+@snap[midpoint span-75 text-07]
 ```
 java 
   --module-path <module directory> 
   --module no.demo.app/no.demo.app.Main
 ```
+@snapend
 
 
 ---
