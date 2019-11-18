@@ -169,6 +169,17 @@ Note:
 @ul[list-spaced-bullets text-white text-09]
 - Tooling og tredjepartsbiblioteker er ikke veldig modne for JPMS ennå.
 - Oversikt over biblioteker i Maven Central med JPMS modulnavn (gyldige og ugyldige) finnes på https://github.com/sormuras/modules.
+@ulend
+@snapend
+
+
+---
+@snap[north-west]
+### Erfaringer
+@snapend
+
+@snap[west]
+@ul[list-spaced-bullets text-white text-09]
 - Testing blir annerledes/vanskeligere på grunn av den sterke innkapslingen. Artikkel: https://sormuras.github.io/blog/2018-09-11-testing-in-the-modular-world.html. Vi gjør en del testing med classpath i stedet for modulepath siden vi støtter på begrensninger i tredjepartsbiblioteker.
 @ulend
 @snapend
