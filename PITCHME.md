@@ -148,8 +148,7 @@ Note:
 @snapend
 
 @snap[west]
-Full frikobling mellom moduler vha tjenester:<br>
-Gir mulighet for «plugin-arkitektur» 
+Tjenester gir mulighet for «plugin-arkitektur» 
 @snapend
 
 ![IMAGE](assets/img/plugin-architecture.png)
