@@ -54,16 +54,16 @@ Note:
 
 @snap[west]
 @ul[list-spaced-bullets text-white text-09]
-- `requires` &nbsp;-> Moduler denne modulen er avhengig av
-- `uses` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; -> Tjenester denne modulen bruker
-- `exports` &nbsp; -> Pakker som er tilgjengelige
-- `provides`  -> Tjenester denne modulen tilbyr
-- `opens` &nbsp;&nbsp;&nbsp; &nbsp; -> Pakker åpne for reflection
+- `requires` -> Moduler denne modulen er avhengig av
+- `uses` -> Tjenester denne modulen bruker
+- `exports` -> Pakker som er tilgjengelige
+- `provides` -> Tjenester denne modulen tilbyr
+- `opens` -> Pakker åpne for reflection
 @ulend
 @snapend
 
 Note:
-- Dette er java-kode som kompileres: Introduserer nye Java nøkkelord.
+- Dette er java-kode som kompileres: Introduserer 5 nye Java nøkkelord.
 
 
 ---
@@ -113,13 +113,16 @@ TODO: Legg til beskrivelse av module path
 
 @snap[west]
 @ul[list-spaced-bullets text-white text-09]
-- *Sterkere innkapsling*: Vedlikeholdbarhet og sikkerhet
+- *Sterkere innkapsling*: 
+  - Vedlikeholdbarhet
+  - Sikkerhet
 - *Sterkere kontroll av avhengigheter*: Module path i compile- _og_ launchtime
 @ulend
 @snapend
 
 Note:
 - Ad 1: Kun eksporterte klasser som er public er tilgjengelige utenfra. Public/package/protected klasser som ikke er eksporterte er IKKE tilgjengelige.
+- Ad 1: - Den sterke innkapslingen vil ikke gjøre det så enkelt å ta snarveier, dvs lage unødvendige avhengheter, tidlig i et prosjekt.
 - Ad 2: Vha module-path dannes en graf av moduler (i både compile- og runtime) som både javac/java kan forholde seg til, ikke bare en haug med klasser (classpath).
 
 
@@ -141,7 +144,8 @@ Note:
 @snapend
 
 @snap[west]
-Full frikobling mellom moduler vha tjenester: Gir mulighet for «plugin-arkitektur» 
+Full frikobling mellom moduler vha tjenester:<br>
+Gir mulighet for «plugin-arkitektur» 
 @snapend
 
 TODO: Eksempel
@@ -155,40 +159,33 @@ Note:
 
 ---
 @snap[north-west]
-### Nytteverdi: Påstand
-@snapend
-
-På  sikt vil det være enklere å vedlikeholde et system med JPMS-moduler
-
-Note:
-- Den sterke innkapslingen vil ikke gjøre det så enkelt å ta snarveier, dvs lage unødvendige avhengheter, tidlig i et prosjekt.
-
-
----
-@snap[north-west]
 ### Erfaringer
 @snapend
 
 @snap[west]
 @ul[list-spaced-bullets text-white text-09]
 - Verktøystøtte og tredjepartsbiblioteker er ikke _veldig_ modne for JPMS ennå.
-- Maven er klargjort for JPMS fra tidlig av. Det vil si at Maven plugins (compiler, surefire, failsafe) «skjønner» og bruker modulepath.
+- Maven er klargjort for JPMS fra starten av. 
+- Testing blir annerledes/vanskeligere på grunn av den sterke innkapslingen. En del testing med classpath i stedet for module path pga begrensninger i tredjepartsbiblioteker.
 @ulend
 @snapend
 
 Note: 
 - Vi har benyttet JPMS-moduler i to prosjekter: Ett er i produksjon og det andre er under utvikling. Det er altså litt tidlig å si hva som er nytteverdien, men arkitekturen i systemene er tydelig påvirket av JPMS.
+- Ad 2: Det vil si at Maven plugins (compiler, surefire, failsafe) «skjønner» og bruker modulepath.
 
 
 ---
 @snap[north-west]
-### Erfaringer
+### Lenker
 @snapend
 
 @snap[west]
 @ul[list-spaced-bullets text-white text-09]
 - Oversikt over biblioteker i Maven Central med JPMS modulnavn (gyldige og ugyldige) finnes på https://github.com/sormuras/modules.
-- Testing blir annerledes/vanskeligere på grunn av den sterke innkapslingen. Vi gjør en del testing med classpath i stedet for modulepath siden vi støtter på begrensninger i tredjepartsbiblioteker.
+- Artikkel om testing: https://sormuras.github.io/blog/2018-09-11-testing-in-the-modular-world.html.
+- Blog om (bl.a.) JPMS: https://blog.codefx.org/tag/jpms/
+- Bok: https://www.manning.com/books/the-java-module-system 
 @ulend
 @snapend
 
