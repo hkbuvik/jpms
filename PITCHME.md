@@ -100,13 +100,11 @@ module no.demo.core.user.authentication {
 Klasser lastes fra module path, ikke fra classpath
 @snapend
 
-@snap[midpoint]
 ```
 java 
   --module-path <module directory> 
   --module no.demo.app/no.demo.app.Main
 ```
-@snapend
 
 
 ---
