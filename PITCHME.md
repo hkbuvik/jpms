@@ -147,9 +147,10 @@ Note:
 ### Nytteverdi: Frikobling mellom moduler
 @snapend
 
-@snap[west]
 Tjenester gir mulighet for «plugin-arkitektur» 
-@snapend
+
+
+---
 @snap[midpoint]
 ![IMAGE](assets/img/plugin-architecture.png)
 @snapend
