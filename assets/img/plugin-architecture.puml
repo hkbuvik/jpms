@@ -8,8 +8,8 @@ package "no.demo.api" {
 
 package "no.demo.app" {
     component Consumer as c
-    c ..> s : uses
-    c ..> sl : uses
+    c .> s : uses
+    c .> sl : uses
 }
 
 package "no.demo.lib" {
