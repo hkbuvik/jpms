@@ -97,9 +97,9 @@ module no.demo.core.user.authentication {
 ---
 @snap[north-west]
 ### Lasting av klasser
+Klasser lastes fra module path, ikke fra classpath
 @snapend
 
-Klasser lastes fra module path, ikke fra classpath
 @snap[midpoint]
 ```
 java 
