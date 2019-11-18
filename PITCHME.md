@@ -88,6 +88,13 @@ module no.demo.core.user.authentication {
 
 
 ---
+@snap[north-west]
+### Lasting av klasser
+@snapend
+
+TODO: Legg til beskrivelse av module path 
+
+---
 @snap[midpoint]
 ### Hva er nytteverdien i praksis?
 @snapend
