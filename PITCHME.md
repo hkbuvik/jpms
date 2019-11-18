@@ -150,8 +150,9 @@ Note:
 @snap[west]
 Tjenester gir mulighet for «plugin-arkitektur» 
 @snapend
-
+@snap[midpoint]
 ![IMAGE](assets/img/plugin-architecture.png)
+@snapend
 
 Note:
 - Ad 1: Instansierer tjenester typisk med en factory. Gir kun avhengighet til eksporterte pakker, som gjerne kan være en pakke no.firma.modul.api med interfaces.
