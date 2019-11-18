@@ -1,0 +1,23 @@
+@startuml
+
+component java.util.ServiceLoader as sl
+
+package "no.demo.api" {
+    interface Service as s
+}
+
+package "no.demo.app" {
+    component Consumer as c
+    c ..> s : uses
+    c ..> sl : uses
+}
+
+package "no.demo.lib" {
+    component ServiceProvder as sp
+    sp - s
+}
+
+
+
+sl --> sp : loads
+@enduml

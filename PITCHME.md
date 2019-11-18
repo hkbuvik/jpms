@@ -5,19 +5,19 @@ Intro til
 ---
 ![IMAGE](assets/img/jpms-adoption.jpeg)
 Note:
-- Jeg har brukt JPMS i to prosjekter og er innovativ!
-- Andre som har brukt JPMS?
+- Project Jigsaw ble introdusert i Java 9 i 2017.
+- Jeg har brukt JPMS i to prosjekter, andre som har brukt JPMS?
 - Det tok ca 10 år å modularisere selve JDK-en: Drøyt 100 moduler.
 
 
 ---
 
 @snap[north-west]
-### To viktige mål
+### Project Jigsaw: To hovedmål
 @snapend
 @ul[list-spaced-bullets text-white text-09]
 - Sterkere innkapsling av koden
-- Sterkere kontroll på avhengigheter
+- Sterkere kontroll av avhengigheter
 @ulend
 
 
@@ -36,8 +36,9 @@ JAR + moduldeskriptor
 
 @snap[west]
 @ul[list-spaced-bullets text-white text-09]
+- Java-kode
 - Unikt navn
-- Moduldeskriptor må ligge på rota 
+- Må ligge på rota 
 @ulend
 @snapend
 
@@ -98,7 +99,9 @@ module no.demo.core.user.authentication {
 ### Lasting av klasser
 @snapend
 
-TODO: Legg til beskrivelse av module path 
+Klasser lastes fra module path, ikke fra classpath
+
+`java --module-path <module directory> --module no.demo.app/no.demo.app.Main` 
 
 ---
 @snap[midpoint]
@@ -123,6 +126,7 @@ TODO: Legg til beskrivelse av module path
 Note:
 - Ad 1: Kun eksporterte klasser som er public er tilgjengelige utenfra. Public/package/protected klasser som ikke er eksporterte er IKKE tilgjengelige.
 - Ad 1: - Den sterke innkapslingen vil ikke gjøre det så enkelt å ta snarveier, dvs lage unødvendige avhengheter, tidlig i et prosjekt.
+- Ad 1, sikkerhet: Kritisk kode er skjult for annen kode som ikke `requires` den, og det håndheves både i compile- og runtime.
 - Ad 2: Vha module-path dannes en graf av moduler (i både compile- og runtime) som både javac/java kan forholde seg til, ikke bare en haug med klasser (classpath).
 
 
@@ -148,7 +152,7 @@ Full frikobling mellom moduler vha tjenester:<br>
 Gir mulighet for «plugin-arkitektur» 
 @snapend
 
-TODO: Eksempel
+![IMAGE](assets/img/plugin-architecture.png)
 
 Note:
 - Ad 1: Instansierer tjenester typisk med en factory. Gir kun avhengighet til eksporterte pakker, som gjerne kan være en pakke no.firma.modul.api med interfaces.
