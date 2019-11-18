@@ -37,14 +37,12 @@ JAR + moduldeskriptor
 @snap[west]
 @ul[list-spaced-bullets text-white text-09]
 - Java-kode
-- Unikt navn
+- `module-info.java`
 - Må ligge på rota 
 @ulend
 @snapend
 
 Note:
-- Revers domenenavn er vanlig å bruke.
-- En modul må ha en universelt unikt navn.
 - Moduldeskriptor må ligge på rot-pakken. 
 
 
@@ -55,6 +53,7 @@ Note:
 
 @snap[west]
 @ul[list-spaced-bullets text-white text-09]
+- `module` -> Unikt navn på modulen
 - `requires` -> Moduler denne modulen er avhengig av
 - `uses` -> Tjenester denne modulen bruker
 - `exports` -> Pakker som er tilgjengelige
@@ -64,7 +63,8 @@ Note:
 @snapend
 
 Note:
-- Dette er java-kode som kompileres: Introduserer 5 nye Java nøkkelord.
+- Dette er java-kode som kompileres: Introduserer nye Java nøkkelord.
+- En modul må ha en universelt unikt navn: Revers domenenavn er vanlig å bruke.
 
 
 ---
@@ -181,6 +181,7 @@ Note:
 
 Note: 
 - Vi har benyttet JPMS-moduler i to prosjekter: Ett er i produksjon og det andre er under utvikling. Det er altså litt tidlig å si hva som er nytteverdien, men arkitekturen i systemene er tydelig påvirket av JPMS.
+- Ad 1: Høna-og-egget-problematikk?
 - Ad 2: Det vil si at Maven plugins (compiler, surefire, failsafe) «skjønner» og bruker modulepath.
 
 
