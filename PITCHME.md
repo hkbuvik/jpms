@@ -111,8 +111,11 @@ module no.demo.core.user.authentication {
 ### Nytteverdi: Oppstart av applikasjon
 @snapend
 
-Kan få raskere oppstart, (siden søk etter og lasting av klasser sannsynligvis vil gå raskere, siden en modulgraf settes opp ved oppstart) noe som kan være viktig i containerbaserte miljø.
+Kan få raskere oppstart, noe som er viktig i containerbaserte miljø.
 
+Note:
+- Søk etter, og lasting av, klasser sannsynligvis vil gå raskere, siden en modulgraf settes opp ved oppstart.
+- Mest aktuelt for store applikasjoner.
 
 ---
 @snap[north-west]
@@ -122,11 +125,18 @@ Kan få raskere oppstart, (siden søk etter og lasting av klasser sannsynligvis 
 @snap[west]
 Sterkere innkapsling, forskjellig grad av frikobling:
 @ul[list-spaced-bullets text-white text-09]
-- Direkte avhengighet fra en modul til en annen modul: Instansierer tjenester typisk med new SomeFactory(). Gir kun avhengighet til eksporterte pakker, som gjerne kan være en pakke no.firma.modul.api med interfaces.
-- Full frikobling mellom moduler og mulighet for «plugin-arkitektur»: Laste instans av et interface (definert i en API-modul) med java.util.ServiceLoader. Hvilke moduler som skal deployes til et gitt miljø kan settes opp i en eller flere separate bootstrap-moduler.
+- Direkte avhengighet fra en modul til en annen modul.
+- Full frikobling mellom moduler og mulighet for «plugin-arkitektur» vha tjenester.
 @ulend
 @snapend
 
+TODO: Eksempel
+
+Note:
+- Ad 1: Instansierer tjenester typisk med new SomeFactory(). Gir kun avhengighet til eksporterte pakker, som gjerne kan være en pakke no.firma.modul.api med interfaces.
+- Ad 2: En tjeneste defineres gjerne som et interface i en API-modul.
+- Ad 2: Laste instans av et tjeneste med java.util.ServiceLoader. 
+- Ad 2: Hvilke moduler som skal deployes til et gitt miljø kan settes opp i en eller flere separate bootstrap-moduler.
 
 ---
 @snap[north-west]
@@ -135,7 +145,8 @@ Sterkere innkapsling, forskjellig grad av frikobling:
 
 På lang sikt så vil det være enklere å vedlikeholde et system med JPMS-moduler.
 
-(Den sterke innkapslingen vil ikke gjøre det så enkelt å ta snarveier, dvs lage unødvendige avhengheter, tidlig i et prosjekt.)
+Note:
+- Den sterke innkapslingen vil ikke gjøre det så enkelt å ta snarveier, dvs lage unødvendige avhengheter, tidlig i et prosjekt.
 
 ---
 @snap[north-west]
@@ -157,7 +168,7 @@ På lang sikt så vil det være enklere å vedlikeholde et system med JPMS-modul
 @snap[west]
 @ul[list-spaced-bullets text-white text-09]
 - Tooling og tredjepartsbiblioteker er ikke veldig modne for JPMS ennå.
-Oversikt over biblioteker i Maven Central med JPMS modulnavn (gyldige og ugyldige) finnes på https://github.com/sormuras/modules.
+- Oversikt over biblioteker i Maven Central med JPMS modulnavn (gyldige og ugyldige) finnes på https://github.com/sormuras/modules.
 - Testing blir annerledes/vanskeligere på grunn av den sterke innkapslingen. Artikkel: https://sormuras.github.io/blog/2018-09-11-testing-in-the-modular-world.html. Vi gjør en del testing med classpath i stedet for modulepath siden vi støtter på begrensninger i tredjepartsbiblioteker.
 @ulend
 @snapend
