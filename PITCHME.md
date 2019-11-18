@@ -54,11 +54,11 @@ Note:
 
 @snap[west]
 @ul[list-spaced-bullets text-white text-09]
-- `requires  -> `Moduler denne modulen er avhengig av
-- `uses      -> `Tjenester denne modulen bruker
-- `exports   -> `Pakker som er tilgjengelige
-- `provides  -> `Tjenester denne modulen tilbyr
-- `opens     -> `Pakker åpne for reflection
+- `requires`&nbsp;&nbsp;&nbsp;-> Moduler denne modulen er avhengig av
+- `uses`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-> Tjenester denne modulen bruker
+- `exports`&nbsp;&nbsp;&nbsp;-> Pakker som er tilgjengelige
+- `provides`&nbsp;&nbsp;-> Tjenester denne modulen tilbyr
+- `opens`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-> Pakker åpne for reflection
 @ulend
 @snapend
 
