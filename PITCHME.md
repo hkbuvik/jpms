@@ -125,7 +125,8 @@ java
 - *Sterkere innkapsling*: 
   - Vedlikeholdbarhet
   - Sikkerhet
-- *Sterkere kontroll av avhengigheter*: Module path i compile- _og_ launchtime
+- *Sterkere kontroll av avhengigheter*:<br> 
+Module path og moduldeskriptor muliggjør sjekk i compile- _og_ launchtime
 @ulend
 @snapend
 
