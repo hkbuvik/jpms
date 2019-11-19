@@ -65,7 +65,7 @@ Note:
 Note:
 - Dette er java-kode som kompileres: Introduserer nye Java nøkkelord.
 - En modul må ha en universelt unikt navn: Revers domenenavn er vanlig å bruke.
-
+- `exports` er på en måte den "viktigste":  Klasser som ikke både er public og ligger i en eksportert, pakke er ikke tilgjengelig utenfra, hverken via arv, package scope (fordi "split packages" er ikke tillatt) eller reflection.
 
 ---
 @snap[north-west]
@@ -180,7 +180,6 @@ Note:
 @snapend
 
 Note: 
-- Vi har benyttet JPMS-moduler i to prosjekter: Ett er i produksjon og det andre er under utvikling. Det er altså litt tidlig å si hva som er nytteverdien, men arkitekturen i systemene er tydelig påvirket av JPMS.
 - Ad 1: Høna-og-egget-problematikk?
 - Ad 2: Det vil si at Maven plugins (compiler, surefire, failsafe) «skjønner» og bruker modulepath.
 
