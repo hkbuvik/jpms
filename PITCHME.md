@@ -96,7 +96,7 @@ module no.demo.core.user.authentication {
 
 ---
 @snap[north-west]
-### Lasting av klasser
+### Aktivering av modulsystemet
 Klasser lastes fra module path, ikke fra classpath
 @snapend
 
@@ -107,6 +107,9 @@ java
   --module no.demo.app/no.demo.app.Main
 ```
 @snapend
+
+Note:
+- Vha module-path og moduldeskriptorer dannes en _graf av moduler_ (i både compile- og runtime) som både javac/java kan forholde seg til,  i motsetning til å måtte scanne hele classpath for å laste klasser.
 
 
 ---
@@ -134,7 +137,6 @@ Note:
 - Ad 1: Kun eksporterte klasser som er public er tilgjengelige utenfra. Public/package/protected klasser som ikke er eksporterte er IKKE tilgjengelige.
 - Ad 1: - Den sterke innkapslingen vil ikke gjøre det så enkelt å ta snarveier, dvs lage unødvendige avhengheter, tidlig i et prosjekt.
 - Ad 1, sikkerhet: Kritisk kode er skjult for annen kode som ikke `requires` den, og det håndheves både i compile- og runtime.
-- Ad 2: Vha module-path dannes en graf av moduler (i både compile- og runtime) som både javac/java kan forholde seg til, ikke bare en haug med klasser (classpath).
 
 
 ---
