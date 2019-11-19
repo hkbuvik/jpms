@@ -117,7 +117,7 @@ java
 
 ---
 @snap[north-west]
-### Nytteverdi: To viktige mål
+### Nytteverdi: To hovedmål
 @snapend
 
 @snap[west]
