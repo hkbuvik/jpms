@@ -48,7 +48,7 @@ Note:
 
 ---
 @snap[north-west]
-### Moduldeskriptor
+### Moduldeskriptor: `module-info.java`
 @snapend
 
 @snap[west]
